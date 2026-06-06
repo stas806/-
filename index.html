@@ -1,122 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>La Cucina</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Cucina</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h2>🍝 La Cucina</h2>
+    <h1>🍝 La Cucina</h1>
+
     <nav>
         <a href="#">Home</a>
         <a href="#menu">Menu</a>
         <a href="#about">About</a>
-        <a href="#">Contact</a>
     </nav>
+
+    <div class="cart-icon">
+        🛒 <span id="cart-count">0</span>
+    </div>
 </header>
 
 <section class="hero">
-    <h1>Welcome to La Cucina</h1>
+    <h2>Welcome to La Cucina</h2>
     <p>Experience authentic Italian cuisine</p>
-    <button onclick="scrollToMenu()">View Menu</button>
-    <button class="outline" onclick="bookTable()">Book a Table</button>
 </section>
 
 <section id="menu">
-    <h1>Our Menu</h1>
+    <h2>Our Menu</h2>
 
-    <div class="filters">
-        <button onclick="filterMenu('all')">All</button>
-        <button onclick="filterMenu('starter')">Starters</button>
-        <button onclick="filterMenu('main')">Main Course</button>
-        <button onclick="filterMenu('dessert')">Desserts</button>
-    </div>
+    <div class="menu-grid">
 
-    <div class="menu">
-        <div class="card main">
+        <div class="card">
             <h3>Grilled Salmon</h3>
             <p>$28</p>
+            <button onclick="addToCart('Grilled Salmon',28)">
+                Add to Cart
+            </button>
         </div>
 
-        <div class="card main">
+        <div class="card">
             <h3>Ribeye Steak</h3>
             <p>$42</p>
+            <button onclick="addToCart('Ribeye Steak',42)">
+                Add to Cart
+            </button>
         </div>
 
-        <div class="card starter">
+        <div class="card">
             <h3>Caesar Salad</h3>
             <p>$12</p>
+            <button onclick="addToCart('Caesar Salad',12)">
+                Add to Cart
+            </button>
         </div>
 
-        <div class="card starter">
+        <div class="card">
             <h3>Bruschetta</h3>
             <p>$10</p>
+            <button onclick="addToCart('Bruschetta',10)">
+                Add to Cart
+            </button>
         </div>
 
-        <div class="card dessert">
+        <div class="card">
             <h3>Tiramisu</h3>
             <p>$9</p>
+            <button onclick="addToCart('Tiramisu',9)">
+                Add to Cart
+            </button>
         </div>
 
-        <div class="card dessert">
+        <div class="card">
             <h3>Chocolate Cake</h3>
             <p>$11</p>
+            <button onclick="addToCart('Chocolate Cake',11)">
+                Add to Cart
+            </button>
         </div>
+
     </div>
 </section>
 
-<!-- 🔥 ABOUT SECTION -->
 <section id="about">
-    <h1>About La Cucina</h1>
-
+    <h2>About La Cucina</h2>
     <p>
-        Since 1985, La Cucina has been serving authentic Italian cuisine in the heart of the city.
-        Our passion for traditional recipes combined with modern culinary techniques creates an unforgettable dining experience.
+        Since 1985, La Cucina has been serving authentic Italian cuisine.
     </p>
-
-    <p>
-        Our head chef, Giuseppe Romano, brings over 30 years of experience from restaurants across Italy
-        and brings the true taste of Italy to your table.
-    </p>
-
-    <h3>⭐ 5-star Michelin Recommended</h3>
-
-    <h2>Opening Hours</h2>
-
-    <p><b>Monday - Thursday</b><br>5:00 PM - 10:00 PM</p>
-    <p><b>Friday - Saturday</b><br>5:00 PM - 11:00 PM</p>
-    <p><b>Sunday</b><br>4:00 PM - 9:00 PM</p>
 </section>
+
+<div class="cart">
+    <h2>🛒 Cart</h2>
+    <ul id="cart-items"></ul>
+    <h3>Total: $<span id="total">0</span></h3>
+    <button onclick="clearCart()">Clear Cart</button>
+</div>
 
 <script src="script.js"></script>
-</body>
 
-<!-- 🔥 VISIT US -->
-<section id="visit">
-    <h1>Visit Us</h1>
-    <p class="subtitle">We'd love to serve you</p>
+<a href="#contacts">contacts</a>
 
-    <div class="visit-container">
-        <div class="visit-card">
-            <h2>Location</h2>
-            <p>123 Main Street</p>
-            <p>New York, NY 10001</p>
-        </div>
 
-        <div class="visit-card">
-            <h2>Phone</h2>
-            <p>(555) 123-4567</p>
-            <p>Call for reservations</p>
-        </div>
+<section id="contacts">
+    <h2>Contact Us</h2>
 
-        <div class="visit-card">
-            <h2>Email</h2>
-            <p>info@lacucina.com</p>
-            <p>We'll respond within 24h</p>
-        </div>
-    </div>
+    <p>📞 Phone: +380 67 123 45 67</p>
+
+    <p>📧 Email: lacucina@gmail.com</p>
+
+    <p>📍 Address: Ternopil, Ukraine</p>
 </section>
 
+</body>
 </html>
